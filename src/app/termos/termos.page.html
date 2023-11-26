@@ -1,0 +1,62 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-searchbar color="light" placeholder="Pesquisar"></ion-searchbar>
+  </ion-content>
+<div>
+  <ion-list lines="full">
+    <ion-item href="home">
+      <ion-label>Inicio</ion-label>
+      <ion-icon slot="start" name="home"></ion-icon>
+    </ion-item>
+    <ion-item href="cadastro">
+      <ion-label>Registre-se</ion-label>
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+    </ion-item>
+    <ion-item href="suporte">
+      <ion-label>Suporte</ion-label>
+      <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
+    </ion-item>
+    <ion-item href="sobre">
+      <ion-label>Sobre o app</ion-label>
+      <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="logo2" slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-img id="logo" src="https://deliverybrasil.top/wp-content/uploads/2020/12/deliveryyy-2.png" alt="logo"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding" [fullscreen]="true">
+    <br>
+    <ion-title>Termos e Condições de Uso Delivery</ion-title>
+    <br>
+    <p id="termos"> 1 - <b>Aceitação dos Termos e Condições de Uso </b> Ao utilizar o aplicativo, você concorda com estes Termos e Condições de Uso. Se você não concordar com estes termos, por favor, não utilize o aplicativo.<br><br>
+
+2 - <b>Descrição do Serviço</b> Nosso aplicativo fornece uma plataforma para os usuários visualizarem várias empresas de delivery. No entanto, não temos nenhuma afiliação ou ligação com as empresas listadas no aplicativo.<br><br>
+
+3 - <b>Isenção de Responsabilidade</b> O aplicativo não é responsável por quaisquer transações entre o usuário e as empresas listadas. Qualquer acordo feito é estritamente entre o usuário e a empresa.<br><br>
+
+4 - <b>Direitos Autorais e Marcas Registradas</b> Todas as marcas registradas, logotipos, imagens e nomes comerciais exibidos ou mencionados no aplicativo são propriedade de seus respectivos proprietários.<br><br>
+
+5 - <b>Alterações nos Termos e Condições</b> Reservamo-nos o direito de alterar estes Termos e Condições a qualquer momento. Recomendamos que os usuários revisem regularmente nossos Termos e Condições.<br><br>
+
+6 - <b>Lei Aplicável Estes Termos e Condições</b> são regidos pelas leis do Brasil.<br><br>
+
+7 - <b>Ao utilizar nosso aplicativo, você concorda em cumprir estes Termos e Condições. Se você tiver alguma dúvida sobre estes termos, entre em contato conosco.</b>
+    </p>
+  </ion-content>
+</div>

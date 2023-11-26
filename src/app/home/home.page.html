@@ -1,0 +1,95 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div>
+      <div>
+        <ion-searchbar color="light" [(ngModel)]="formulario.valor" placeholder="Pesquisar"></ion-searchbar>
+        <ion-button class="buscar" expand="block" color="dark" (click)="escrevedados()">Buscar</ion-button>
+      </div>
+
+      <ion-list class="custom-list">
+        <ion-item *ngFor="let product of lista">
+          <ion-avatar item-left>
+            <img src="{{product.imagem}}" />
+          </ion-avatar>
+          <ion-label>
+            <h2>&nbsp;&nbsp;{{product.nome}}</h2>
+            <p>&nbsp;&nbsp;{{product.categoria}}</p>
+            <p><ion-button class="zap"  [href]="'https://wa.me/' + product.telefone + '?text=Boa+Tarde%21+Gostaria+de+fazer+um+pedido%2C+poderia+me+enviar+o+card%C3%A1pio+por+favor%3F'">
+              <ion-icon slot="start" name="paper-plane-outline"></ion-icon>
+              WhatsApp
+            </ion-button></p>
+            
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-content>
+  <div>
+    <ion-list lines="full">
+      <ion-item href="cadastro">
+        <ion-label>Registre-se</ion-label>
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      </ion-item>
+      <ion-item href="suporte">
+        <ion-label>Suporte</ion-label>
+        <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
+      </ion-item>
+      <ion-item href="termos">
+        <ion-label>Termos e condições</ion-label>
+        <ion-icon slot="start" name="file-tray-full-outline"></ion-icon>
+      </ion-item>
+      <ion-item href="sobre">
+        <ion-label>Sobre o app</ion-label>
+        <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="logo2" slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-img
+        id="logo"
+        src="https://deliverybrasil.top/wp-content/uploads/2020/12/deliveryyy-2.png"
+        alt="logo"
+      ></ion-img>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding" [fullscreen]="true">
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let product of itens">
+              <ion-thumbnail slot="start">
+                <img
+                  alt=""
+                  src={{product.imagem}}
+                />
+              </ion-thumbnail>
+              <ion-card-header>
+                <ion-card-title>{{product.nome}}</ion-card-title>
+                <ion-card-subtitle>{{product.categoria}}</ion-card-subtitle>
+                <ion-button class="zap"  [href]="'https://wa.me/' + product.telefone + '?text=Boa+Tarde%21+Gostaria+de+fazer+um+pedido%2C+poderia+me+enviar+o+card%C3%A1pio+por+favor%3F'">
+                  <ion-icon slot="start" name="paper-plane-outline"></ion-icon>
+                  WhatsApp
+                </ion-button>
+              </ion-card-header>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+</div>
