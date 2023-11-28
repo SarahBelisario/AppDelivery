@@ -4,9 +4,32 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <ion-content class="ion-padding">
-    <ion-searchbar color="light" placeholder="Pesquisar"></ion-searchbar>
+    
+    <div>
+      <div>
+        <ion-searchbar color="light" [(ngModel)]="formulario.valor" placeholder="Pesquisar"></ion-searchbar>
+        <ion-button class="buscar" expand="block" color="dark" (click)="escrevedados()">Buscar</ion-button>
+      </div>
+
+      <ion-list class="custom-list">
+        <ion-item *ngFor="let product of lista">
+          <ion-avatar item-left>
+            <img src="{{product.imagem}}" />
+          </ion-avatar>
+          <ion-label>
+            <h2>&nbsp;&nbsp;{{product.nome}}</h2>
+            <p>&nbsp;&nbsp;{{product.categoria}}</p>
+            <p><ion-button class="zap"  [href]="'https://wa.me/' + product.telefone + '?text=Boa+Tarde%21+Gostaria+de+fazer+um+pedido%2C+poderia+me+enviar+o+card%C3%A1pio+por+favor%3F'">
+              <ion-icon slot="start" name="paper-plane-outline"></ion-icon>
+              WhatsApp
+            </ion-button></p>
+            
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+    </div>
   </ion-content>
 <div>
   <ion-list lines="full">

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import {  HttpClientModule } from '@angular/common/http';
 import { SuportePageRoutingModule } from './suporte-routing.module';
 
 import { SuportePage } from './suporte.page';
@@ -13,7 +13,8 @@ import { SuportePage } from './suporte.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    SuportePageRoutingModule
+    SuportePageRoutingModule,
+    HttpClientModule
   ],
   declarations: [SuportePage]
 })

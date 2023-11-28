@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import {  HttpClientModule } from '@angular/common/http';
 import { TermosPageRoutingModule } from './termos-routing.module';
 
 import { TermosPage } from './termos.page';
@@ -13,7 +13,8 @@ import { TermosPage } from './termos.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TermosPageRoutingModule
+    TermosPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [TermosPage]
 })
